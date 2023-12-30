@@ -1,0 +1,14 @@
+
+.container {
+
+   text-align: end;
+}
+
+button {
+    font-size: 10px;
+    background-color: beige;
+    border-radius: 10px;
+    margin: 30px;
+    text-align: right;
+
+}
