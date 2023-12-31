@@ -28,4 +28,13 @@ body{
 
 button {
     margin: auto;
+    margin-top: 10px;
 }   
+
+.choose{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 200px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 0px;
+}
