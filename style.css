@@ -17,7 +17,7 @@ body{
     max-width: 500px;
     margin: auto;
 }
-button{
+#myButton {
     font-size: 40px;
     margin: 5px;
     width: 150px;
@@ -26,3 +26,6 @@ button{
 }
 
 
+button {
+    margin: auto;
+}   
