@@ -98,7 +98,11 @@ resetButton.addEventListener('click', resetQuiz);
 // Event listener for the start button to initiate the quiz
 startButton.addEventListener('click', startQuiz);
 
-// ... (Previous code remains unchanged)
+// Event listener for the stop button to stop the quiz
+stopButton.addEventListener('click', () => {
+    clearInterval(intervalId);
+    alert(`Your score is ${score}`);
+})
 
 let intervalId; // To store the interval ID for the timer
 
@@ -119,4 +123,9 @@ function startQuiz() {
     displayQuestion();
 }
 
+let shuffledQuestions = []; // Array to store shuffled questions
 
+// Function to shuffle the quiz questions array
+function shuffleQuestions() {
+    shuffledQuestions = [...quiz].sort(() => Math.random() - 0.5);
+}
