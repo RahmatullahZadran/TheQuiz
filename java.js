@@ -78,6 +78,9 @@ function handleAnswer(selectedOption) {
     }
 }
 
-startQuiz();
-displayQuestion();
-startTimer();
+// Function to start the timer
+if (startButton) {
+    startButton.addEventListener('click', startQuiz);
+    startButton.addEventListener('click', startTimer);
+    startButton.addEventListener('click', displayQuestion);
+}
