@@ -9,7 +9,6 @@ const option3 = document.getElementById('option3');
 const option4 = document.getElementById('option4');
 const timerElement = document.getElementById('timer');
 
-// ... (Rest of your JavaScript code will go here)
 // Define your quiz questions and answers
 const quiz = [
     {
@@ -19,15 +18,49 @@ const quiz = [
     },
     {
         question: "What is 2 + 23?",
-        options: ["3", "4", "5", "6"],
-        answer: "4"
+        options: ["4", "22", "66", "25"],
+        answer: "25"
     },
     {
         question: "What is 2 + 3?",
         options: ["3", "4", "5", "6"],
-        answer: "4"
+        answer: "5"
     },
-    // Add more questions following the same structure
+    {
+        question: "What is 4 + 4?",
+        options: ["8", "16", "5", "9"],
+        answer: "8"
+    },
+    {
+        question: "What is 60 - 10?",
+        options: ["60", "42", "50", "6"],
+        answer: "50"
+    },
+    {
+        question: "What is 66 + 99?",
+        options: ["188", "165", "22", "156"],
+        answer: "165"
+    },
+    {
+        question: "What is 5 + 5?",
+        options: ["10", "15", "20", "25"],
+        answer: "10"
+    },
+    {
+        question: "What is 6 + 6?",
+        options: ["12", "18", "24", "30"],
+        answer: "12"
+    },
+    {
+        question: "What is 9 + 9?",
+        options: ["18", "27", "36", "45"],
+        answer: "18"
+    },
+    {
+        question: "What is 10 * 10?",
+        options: ["10", "100", "300", "430"],
+        answer: "100"
+    }
 ];
 
 let currentQuestion = 0;
@@ -41,6 +74,7 @@ function displayQuestion() {
     option2.textContent = quiz[currentQuestion].options[1];
     option3.textContent = quiz[currentQuestion].options[2];
     option4.textContent = quiz[currentQuestion].options[3];
+    
 }
 
 // Function to handle user's answer selection and move to the next question
@@ -49,7 +83,8 @@ function handleAnswer(selectedOption) {
         score++;
         // Handle correct answer
     } else {
-        // Handle incorrect answer
+        //repeat the question
+        time = time - 10; 
     }
 
     if (currentQuestion < quiz.length - 1) {
