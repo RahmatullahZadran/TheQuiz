@@ -143,6 +143,7 @@ let intervalId; // To store the interval ID for the timer
 
 // Function to start the quiz and countdown timer
 function startQuiz() {
+    shuffleQuestions();
     resetQuiz(); // Reset everything before starting
 
     intervalId = setInterval(() => {
